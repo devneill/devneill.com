@@ -1,0 +1,98 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Projects";
+const description = "Projects I'm proud of.";
+const permalink = `${Astro.site?.href}projects` ?? "";
+---
+
+<BaseLayout title={title} description={description} permalink={permalink} current="projects">
+  <div class="container">
+    <h1>Projects</h1>
+    <figure class="about-image">
+      <img
+        src="/assets/about-illustration.webp"
+        alt="Illustration of a notebook"
+        width="330"
+      />
+      <figcaption>
+        Illustration by
+        <a
+          href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6"
+          target="_blank"
+          rel="noopener">Icons 8</a
+        >
+        from
+        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a
+        >
+      </figcaption>
+    </figure>
+    <p>
+      Here are some projects I'm proud of. <a
+          href="https://www.github.com/Charca/astro-blog-template"
+          target="_blank"
+          rel="noopener">Build something with me</a
+        >.
+    </p>
+    <h2>
+  The Epic Stack
+    </h2>
+    <p>
+    I focus my open source energy on contributing to Kent C. Dodd's Epic Stack. His stack is an awesome starting point for building modern web applications and it's what I use when starting something new. <a
+          href="https://www.github.com/epicweb/epic-stack"
+          target="_blank"
+          rel="noopener">Check it out</a
+        >.
+    </p>
+    <h2>
+   GetFranki
+    </h2>
+    <p>
+    Chef Ollie is an energetic, charismatic food lover from Cape Town. From his work as a major catering provider, he realised there is a need for stream-lining how event organisers plan and execute their events. Together, we are building a solution to this. It's called GetFranki. <a
+          href="https://www.github.com/Charca/astro-blog-template"
+          target="_blank"
+          rel="noopener">Check it out</a
+        >.
+    </p>
+    <h2>
+   Dreams web app
+    </h2>
+    <p>
+    Dreams is a savings app that empowers users to save for their future, in fun and engaging way. I've been working with the team building out new features since 2020. <a
+          href="https://www.github.com/Charca/astro-blog-template"
+          target="_blank"
+          rel="noopener">Check it out</a
+        >.
+    </p>
+    <h2>
+   Dreams design system
+    </h2>
+    <p>
+    During my work at Dreams, I realised there was a need to improve our frontend processes. Along with the design team, I built out their design system. It brought the design and development teams closer together and enabled a more consistent user interface across our app. <a
+          href="https://www.github.com/Charca/astro-blog-template"
+          target="_blank"
+          rel="noopener">Check it out</a
+        >.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-image {
+    float: right;
+    margin: -3em -7em 2em 2em;
+    max-width: 300px;
+  }
+
+  .about-image img {
+    border-radius: 8px;
+    margin-bottom: 1.5em;
+  }
+
+  @media (max-width: 1020px) {
+    .about-image {
+      float: none;
+      margin: 0 auto 2em;
+    }
+  }
+</style>
