@@ -8,7 +8,9 @@ description: A reflection on my time at EpicWebConf 2024. The people, the tech, 
 
 # The build-up
 
-It was a significant investment of time, money and energy to get myself to EpicWebConf. Munich to Utah is a long way. I had doubts. Would it be worth it? Would I meet inspiring people? Would I learn exciting tech? Or would it be a series of awkward moments and overwhelming technical lectures 🫠 Knowing [Kent](https://twitter.com/kentcdodds) was behind things, my doubts were small, admittedly, but one can never be sure until you arrive.
+It was a significant investment of time, money and energy to get myself to EpicWebConf. Munich to Utah is a long way. I had doubts. Would it be worth it? Would I meet inspiring people? Would I learn exciting tech? Or would it be a series of awkward moments and overwhelming technical lectures? 🫠
+
+Knowing [Kent](https://twitter.com/kentcdodds) was behind things, my doubts were small, admittedly, but one can never be sure until you arrive.
 
 Regardless of the situation, I wanted to make sure I squeezed every ounce of inspiration and learning from the people I would meet. I arrived, totally jet-lagged but also buzzing with excitement. I spent two days exploring Park City. It was beautiful—the mountains of Utah are incredible. Things were off to a good start.
 
@@ -41,7 +43,7 @@ The big day arrived—the Epic Web Conference 2024. Things kicked off with an ea
 
 On the way, I bumped into [Sandrina](https://twitter.com/a_sandrina_p) - a strong and wise personality. I knew she was giving a talk about accessibility - a weak point of mine. It was nice to get to know her ahead of [her talk](https://www.youtube.com/live/Q0fwzlwTLWk?si=x8kW0d2nuONhSr0C&t=10123), which was eye-opening. After chatting with Sandrina and bumping into Barry, we arrived at the venue and were welcomed with delicious breakfast and good morning chats in the hallway. Anticipation was in the air, and the social nerves were getting shaken out as everyone slowly started getting to know each other. It was time for the first talk.
 
-> “It’s our duty as web creators to make an accessible, epic web” - Sandrina during her talk 🔎️
+> “It’s our duty as web creators to make an accessible, epic web” - Sandrina during her talk 🌎️
 
 # The talks
 

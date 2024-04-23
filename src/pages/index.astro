@@ -1,8 +1,8 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-const title = "My Astro Blog";
-const description = "The perfect starter for your perfect blog.";
+const title = "Home";
+const description = "Devon Neill's personal website and blog.";
 const permalink = Astro.site?.href ?? "";
 ---
 
@@ -12,21 +12,20 @@ const permalink = Astro.site?.href ?? "";
       <h1>Hey 👋🏼 It's Devon</h1>
       <p>
         I write about frontend development and how to make the web a beautiful place. <a
-          href="https://www.github.com/Charca/astro-blog-template"
-          target="_blank"
+          href="/garden"
           rel="noopener">Visit my digital garden</a
         >.
       </p>
       <p>
         I build web applications too. <a
-          href="https://www.github.com/Charca/astro-blog-template"
+          href="https://fantastical.app/withlily/intro"
           target="_blank"
-          rel="noopener">Build something with me</a
+          rel="noopener">Let's build something together</a
         >.
       </p>
     </div>
 
-    <div class="hero-image-container">
+    <!-- <div class="hero-image-container">
       <picture>
         <source srcset="/assets/home-illustration.webp" media="(min-width: 600px)" />
         <img
@@ -48,7 +47,7 @@ const permalink = Astro.site?.href ?? "";
         <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a
         >
       </p>
-    </div>
+    </div> -->
   </div>
 </BaseLayout>
 
@@ -63,6 +62,7 @@ const permalink = Astro.site?.href ?? "";
   }
 
   .home-copy {
+    max-width: 672px;
     flex: 1;
     padding: 0 1em;
   }
@@ -117,7 +117,6 @@ const permalink = Astro.site?.href ?? "";
     .home-copy {
       flex: 0;
       padding-bottom: 2em;
-      text-align: center;
     }
   }
 </style>
