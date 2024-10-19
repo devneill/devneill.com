@@ -1,29 +1,6 @@
-# [Astro](https://astro.build) Blog Template
+# My Personal Site
 
-[![Screenshot](screenshot.png)](https://astro-blog-template.netlify.app/)
-
-## 👉 Check out the ✨ [Live Demo](https://astro-blog-template.netlify.app/) ✨
-
-## 👩‍🚀 Getting Started
-
-### Locally
-
-```
-npm init astro -- --template Charca/astro-blog-template
-```
-
-### On StackBlitz
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/charca/astro-blog-template)
-
-## ✨ Features:
-
-- ✅ Astro 4.0
-- ✅ Dark Mode
-- ✅ Full Markdown support
-- ✅ SEO-friendly setup with canonical URLs and OpenGraph data
-- ✅ RSS 2.0 generation
-- ✅ Sitemap.xml generation
+Built on top of Maxi's blog template -  https://github.com/Charca/astro-blog-template
 
 ## 🚀 Project Structure
 
