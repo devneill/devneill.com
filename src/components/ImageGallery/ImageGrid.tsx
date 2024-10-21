@@ -4,20 +4,20 @@ import { X } from "react-feather";
 
 import styles from "./ImageGrid.module.css";
 
-function BookGrid({ books, handleSelectBook, ...delegated }) {
+function ImageGrid({ images, handleSelectImage, ...delegated }) {
   return (
     <section {...delegated}>
       <ul className={styles.wrapper}>
-        {books.map((book) => (
-          <li key={book.isbn}>
+        {images.map((image) => (
+          <li key={image.isbn}>
             <button
               className={styles.bookBtn}
-              onClick={() => handleSelectBook(book)}
+              onClick={() => handleSelectImage(image)}
             >
               <motion.img
-                layoutId={`book-cover-${book.isbn}`}
-                alt={book.name}
-                src={book.coverSrc}
+                layoutId={`book-cover-${image.isbn}`}
+                alt={image.name}
+                src={image.coverSrc}
                 className={styles.bookCover}
                 draggable={false}
               />
@@ -29,4 +29,4 @@ function BookGrid({ books, handleSelectBook, ...delegated }) {
   );
 }
 
-export default BookGrid;
+export default ImageGrid;

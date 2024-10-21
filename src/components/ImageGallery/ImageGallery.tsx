@@ -6,35 +6,37 @@ import ImageGrid from "./ImageGrid";
 import ImageFeature from "./ImageFeature";
 import styles from "./ImageGallery.module.css";
 
-function BookPage() {
-  const [books, setBooks] = React.useState(DATA);
+function ImageGallery() {
+  const [images, setImages] = React.useState(DATA);
 
-  function toggleBook(toggledBook) {
-    const nextBooks = books.filter((book) => book.isbn !== toggledBook.isbn);
+  function toggleImage(toggledImage) {
+    const nextImages = images.filter(
+      (image) => image.isbn !== toggledImage.isbn,
+    );
 
-    nextBooks.push({
-      ...toggledBook,
-      selected: !toggledBook.selected,
+    nextImages.push({
+      ...toggledImage,
+      selected: !toggledImage.selected,
     });
 
-    setBooks(nextBooks);
+    setImages(nextImages);
   }
 
-  const selectedBooks = books.filter((book) => book.selected);
-  const unselectedBooks = books.filter((book) => !book.selected);
+  const selectedImages = images.filter((image) => image.selected);
+  const unselectedImages = images.filter((image) => !image.selected);
 
   return (
     <div className={styles.wrapper}>
       <ImageGrid
         className={styles.grid}
-        books={unselectedBooks}
-        handleSelectBook={toggleBook}
+        images={unselectedImages}
+        handleSelectImage={toggleImage}
       />
-      {selectedBooks.length > 0 && (
-        <ImageFeature books={selectedBooks} handleRemoveBook={toggleBook} />
+      {selectedImages.length > 0 && (
+        <ImageFeature images={selectedImages} handleRemoveImage={toggleImage} />
       )}
     </div>
   );
 }
 
-export default BookPage;
+export default ImageGallery;

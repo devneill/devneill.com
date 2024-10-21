@@ -5,7 +5,7 @@ import { X } from "react-feather";
 // import VisuallyHidden from "./VisuallyHidden";
 import styles from "./ImageFeature.module.css";
 
-function ReadingList({ books, handleRemoveBook }) {
+function ImageFeature({ images, handleRemoveImage }) {
   const [highlightedIndex, setHighlightedIndex] = React.useState(null);
 
   return (
@@ -18,27 +18,27 @@ function ReadingList({ books, handleRemoveBook }) {
       >
         <h2>Reading List</h2>
         <ol className={styles.books}>
-          {books.map((book, bookIndex) => {
-            const reverseBookIndex = books.length - bookIndex - 1;
+          {images.map((image, imageIndex) => {
+            const reverseBookIndex = images.length - imageIndex - 1;
 
             let height = Math.max(50 - reverseBookIndex * 5, 10);
 
-            if (bookIndex === highlightedIndex) {
+            if (imageIndex === highlightedIndex) {
               height = 100;
             }
 
             return (
               <li
-                key={book.isbn}
+                key={image.isbn}
                 style={{ height }}
                 onMouseEnter={() => {
-                  setHighlightedIndex(bookIndex);
+                  setHighlightedIndex(imageIndex);
                 }}
               >
                 <motion.img
-                  layoutId={`book-cover-${book.isbn}`}
-                  alt={book.name}
-                  src={book.coverSrc}
+                  layoutId={`book-cover-${image.isbn}`}
+                  alt={image.name}
+                  src={image.coverSrc}
                   draggable={false}
                   className={styles.bookCover}
                   transition={{
@@ -50,9 +50,9 @@ function ReadingList({ books, handleRemoveBook }) {
                 <motion.button
                   layout="position"
                   className={styles.deleteBtn}
-                  onClick={() => handleRemoveBook(book)}
+                  onClick={() => handleRemoveImage(image)}
                   onFocus={() => {
-                    setHighlightedIndex(bookIndex);
+                    setHighlightedIndex(imageIndex);
                   }}
                   transition={{
                     type: "spring",
@@ -72,4 +72,4 @@ function ReadingList({ books, handleRemoveBook }) {
   );
 }
 
-export default ReadingList;
+export default ImageFeature;
