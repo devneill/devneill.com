@@ -6,13 +6,19 @@ import ImageGrid from "./ImageGrid";
 import ImageFeature from "./ImageFeature";
 import styles from "./ImageGallery.module.css";
 
-function ImageGallery() {
-  const [images, setImages] = React.useState(DATA);
+export interface Image {
+  id: string;
+  alt: string;
+  src: string;
+  caption: string;
+  selected?: boolean;
+}
 
-  function toggleImage(toggledImage) {
-    const nextImages = images.filter(
-      (image) => image.isbn !== toggledImage.isbn,
-    );
+function ImageGallery() {
+  const [images, setImages] = React.useState<Image[]>(DATA);
+
+  function toggleImage(toggledImage: Image) {
+    const nextImages = images.filter((image) => image.id !== toggledImage.id);
 
     nextImages.push({
       ...toggledImage,

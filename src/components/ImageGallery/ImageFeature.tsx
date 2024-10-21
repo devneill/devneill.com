@@ -1,12 +1,20 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { X } from "react-feather";
+import { type Image } from "./ImageGallery";
 
 // import VisuallyHidden from "./VisuallyHidden";
 import styles from "./ImageFeature.module.css";
 
-function ImageFeature({ images, handleRemoveImage }) {
-  const [highlightedIndex, setHighlightedIndex] = React.useState(null);
+interface ImageFeatureProps {
+  images: Image[];
+  handleRemoveImage: (image: Image) => void;
+}
+
+function ImageFeature({ images, handleRemoveImage }: ImageFeatureProps) {
+  const [highlightedIndex, setHighlightedIndex] = React.useState<number | null>(
+    null,
+  );
 
   return (
     <>
@@ -29,16 +37,16 @@ function ImageFeature({ images, handleRemoveImage }) {
 
             return (
               <li
-                key={image.isbn}
+                key={image.id}
                 style={{ height }}
                 onMouseEnter={() => {
                   setHighlightedIndex(imageIndex);
                 }}
               >
                 <motion.img
-                  layoutId={`book-cover-${image.isbn}`}
-                  alt={image.name}
-                  src={image.coverSrc}
+                  layoutId={`image-${image.id}`}
+                  alt={image.alt}
+                  src={image.src}
                   draggable={false}
                   className={styles.bookCover}
                   transition={{

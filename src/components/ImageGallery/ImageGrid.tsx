@@ -1,23 +1,32 @@
-import React from "react";
 import { motion } from "framer-motion";
-import { X } from "react-feather";
+import { type Image } from "./ImageGallery";
 
 import styles from "./ImageGrid.module.css";
 
-function ImageGrid({ images, handleSelectImage, ...delegated }) {
+interface ImageGridProps {
+  images: Image[];
+  handleSelectImage: (image: Image) => void;
+  [key: string]: any; // for ...delegated
+}
+
+function ImageGrid({
+  images,
+  handleSelectImage,
+  ...delegated
+}: ImageGridProps) {
   return (
     <section {...delegated}>
       <ul className={styles.wrapper}>
         {images.map((image) => (
-          <li key={image.isbn}>
+          <li key={image.id}>
             <button
               className={styles.bookBtn}
               onClick={() => handleSelectImage(image)}
             >
               <motion.img
-                layoutId={`book-cover-${image.isbn}`}
-                alt={image.name}
-                src={image.coverSrc}
+                layoutId={`image-${image.id}`}
+                alt={image.alt}
+                src={image.src}
                 className={styles.bookCover}
                 draggable={false}
               />
