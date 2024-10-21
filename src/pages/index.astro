@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ImageGallery from "../components/ImageGallery/ImageGallery.tsx";
 
 const title = "Dev Neill";
 const description = "Devon's digital home.";
@@ -21,6 +22,7 @@ const permalink = Astro.site?.href ?? "";
                 </p>
             </div>
         </div>
+        <ImageGallery client:load />
         <div class="w-full mt-auto text-center">
             <span class="text-2xl sm:text-4xl font-black tracking-tight mb-8">
                 👇
