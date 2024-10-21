@@ -5,10 +5,14 @@ import remarkGfm from "remark-gfm";
 import remarkSmartypants from "remark-smartypants";
 import rehypeExternalLinks from "rehype-external-links";
 
+import tailwind from "@astrojs/tailwind";
+
+import react from "@astrojs/react";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://devneill.com",
-  integrations: [mdx(), svelte()],
+  integrations: [mdx(), svelte(), tailwind(), react()],
   markdown: {
     shikiConfig: {
       theme: "nord",

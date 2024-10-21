@@ -1,23 +1,22 @@
-<footer>
-  <span>
-    &copy; {new Date().getFullYear()} Devneill.com. Powered by <a
-      href="https://astro.build"
-      target="_blank"
-      rel="noopener">Astro</a
-    >. Template by <a href="https://www.twitter.com/Charca" target="_blank" rel="noopener"
-      >Maxi Ferreira</a
-    >.
-  </span>
+<footer class="py-6 sm:py-8 px-4 sm:px-6 border-t flex flex-col gap-8">
+    <div class="w-full text-left flex flex-col gap-2">
+        <h3 class="text-xl font-black tracking-tight">Subscribe</h3>
+        <p class="text-base">
+            I reflect once a month on my journey of building a software business
+            as a solo founder. Written as an update for my friends, and a record
+            for myself.
+        </p>
+        <div class="py-4 w-full text-center">SUBSTACK INPUT HERE</div>
+    </div>
+    <div class="w-full grid grid-rows-3 grid-flow-col">
+        <a href="/">About</a>
+        <a href="/blog">Blog</a>
+        <a href="/dev-build">Dev build</a>
+        <a href="https://x.com/devneill">X</a>
+        <a href="https://linkedin.com/in/devneill">LinkedIn</a>
+        <a href="https://github.com/devneill">GitHub</a>
+    </div>
+    <p>
+        &copy; {new Date().getFullYear()} Devon Neill
+    </p>
 </footer>
-
-<style>
-  footer {
-    color: var(--text-secondary);
-    font-size: 0.8em;
-    margin: 1em auto;
-    max-width: 1400px;
-    padding: 1em 2em;
-    text-align: center;
-    width: 100%;
-  }
-</style>
