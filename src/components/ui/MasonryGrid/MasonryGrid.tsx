@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./MasonryGrid.module.css";
 import { motion } from "framer-motion";
 import DATA from "../../../data/photos";
-import clsx from "clsx";
+import { cn } from "../../../utils/misc";
 
 export interface Image {
   id: string;
@@ -40,7 +40,7 @@ export default function MasonryGrid({ ...delegated }) {
               onClick={() => toggleImage(img)}
               layout
               transition={{ type: "spring", stiffness: 600, damping: 60 }}
-              className={clsx(
+              className={cn(
                 "sepia-[0.2] hover:sepia-0",
                 img.selected && img.shape !== "tall" && img.shape !== "wide"
                   ? styles.big

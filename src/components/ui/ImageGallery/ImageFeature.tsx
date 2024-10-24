@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { X } from "react-feather";
 import { type Image } from "./ImageGallery";
 
 // import VisuallyHidden from "./VisuallyHidden";
