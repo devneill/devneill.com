@@ -25,12 +25,7 @@ export default function MasonryGrid({ ...delegated }) {
 
     setImages(nextImages);
   }
-  const [isExpanded, setIsExpanded] = useState(false);
 
-  function handleClick() {
-    const nextIsExpanded = !isExpanded;
-    setIsExpanded(nextIsExpanded);
-  }
   return (
     <div {...delegated}>
       <div className={styles.container}>

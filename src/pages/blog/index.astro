@@ -32,7 +32,7 @@ allPosts = allPosts.sort(
                     </p>
                 </div>
                 {
-                    allPosts.map((post, index) => {
+                    allPosts.map((post) => {
                         const href = `/blog/${post.file.split("/").pop()?.split(".").shift()}`;
                         return (
                             <>
