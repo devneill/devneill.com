@@ -3,7 +3,7 @@
   "libraries": [
     {
       "name": "@radix-ui/icons",
-      "directory": "./src/components/icons",
+      "directory": "./src/icons",
       "postinstall": [],
       "transformers": []
     }

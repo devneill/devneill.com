@@ -1,13 +1,13 @@
-import { defineConfig } from "astro/config";
-import svelte from "@astrojs/svelte";
 import mdx from "@astrojs/mdx";
+import react from "@astrojs/react";
+import svelte from "@astrojs/svelte";
+import tailwind from "@astrojs/tailwind";
+import { defineConfig } from "astro/config";
+import rehypeExternalLinks from "rehype-external-links";
 import remarkGfm from "remark-gfm";
 import remarkSmartypants from "remark-smartypants";
-import rehypeExternalLinks from "rehype-external-links";
 
-import tailwind from "@astrojs/tailwind";
 
-import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({

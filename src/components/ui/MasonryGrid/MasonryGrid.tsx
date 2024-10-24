@@ -1,8 +1,8 @@
-import { useState } from "react";
-import styles from "./MasonryGrid.module.css";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import DATA from "../../../data/photos";
 import { cn } from "../../../utils/misc";
+import styles from "./MasonryGrid.module.css";
 
 export interface Image {
   id: string;
@@ -33,6 +33,7 @@ export default function MasonryGrid({ ...delegated }) {
           return (
             <motion.div
               onClick={() => toggleImage(img)}
+              key={img.id}
               layout
               transition={{ type: "spring", stiffness: 600, damping: 60 }}
               className={cn(
