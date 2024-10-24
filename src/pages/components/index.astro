@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import MasonryGrid from "../../components/ui/MasonryGrid/MasonryGrid";
+
+const title = "Hand crafted React components by Devon Neill";
+const description =
+    "Unique, animated React components to make your website stand out.";
+const permalink = Astro.site?.href ?? "";
+---
+
+<BaseLayout
+    title={title}
+    description={description}
+    permalink={permalink}
+    current="components"
+>
+    <div class="flex gap-12 flex-col items-center justify-between pb-12">
+        <div class="flex gap-8 flex-col py-12 sm:py-12 justify-between">
+            <div
+                class="text-lg lg:text-3xl leading-relaxed gap-4 flex flex-col"
+            >
+                <h1 class="font-black mb-4">Components</h1>
+                <p>
+                    I've built some components that I use to create memorable
+                    user interfaces.
+                </p>
+                <p>
+                    They are all built with React, TailwindCSS and Framer
+                    Motion. You can use them to make your apps memorable too.
+                </p>
+            </div>
+            <hr />
+            <div>
+                <h2 class="font-black mb-4">Image Gallery</h2>
+                <MasonryGrid className="my-auto" client:load />
+            </div>
+            <hr />
+            <div>
+                <h2 class="font-black mb-4">Image Gallery</h2>
+                <MasonryGrid className="my-auto" client:load />
+            </div>
+            <hr />
+            <div>
+                <h2 class="font-black mb-4">Image Gallery</h2>
+                <MasonryGrid className="my-auto" client:load />
+            </div>
+        </div>
+    </div>
+</BaseLayout>

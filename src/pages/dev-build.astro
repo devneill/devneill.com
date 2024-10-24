@@ -1,0 +1,69 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const title = "Dev build";
+const description =
+    "A monthly reflection on building a software business as a solo founder.";
+const permalink = `${Astro.site?.href}dev-build` ?? "";
+---
+
+<BaseLayout
+    title={title}
+    description={description}
+    permalink={permalink}
+    current="dev-build"
+>
+    <div class="flex gap-12 flex-col items-center justify-between pb-12">
+        <div class="flex gap-12 flex-col py-12 sm:py-12 justify-between">
+            <div class="flex flex-col gap-8">
+                <div
+                    class="text-lg lg:text-3xl leading-relaxed gap-4 flex flex-col"
+                >
+                    <h1 class="font-black mb-4">Dev build</h1>
+                    <p>
+                        I reflect once a month on my journey of building a
+                        software business as a solo founder. Written as an
+                        update for my friends, and a record for myself.
+                    </p>
+                    <p>Here are some posts I’ve published lately.</p>
+                    <p>
+                        You can subscribe and find the full collection at
+                        <a href="https://devneill.substack.com/"
+                            >devneill.substack.com.</a
+                        >
+                    </p>
+                </div>
+                <>
+                    <hr />
+                    <div>
+                        <h2 class="font-black mb-4">
+                            <a
+                                href="https://devneill.substack.com/p/coming-soon"
+                            >
+                                Coming Soon
+                            </a>
+                        </h2>
+                        <div class="text-stone-600 dark:text-stone-400 text-sm">
+                            <span> — 01 May 2024 </span>
+                        </div>
+                    </div>
+                </>
+                <>
+                    <hr />
+                    <div>
+                        <h2 class="font-black mb-4">
+                            <a
+                                href="https://devneill.substack.com/p/coming-soon"
+                            >
+                                Coming Soon
+                            </a>
+                        </h2>
+                        <div class="text-stone-600 dark:text-stone-400 text-sm">
+                            <span> — 01 April 2024 </span>
+                        </div>
+                    </div>
+                </>
+            </div>
+        </div>
+    </div>
+</BaseLayout>

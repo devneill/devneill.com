@@ -1,123 +1,88 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import MasonryGrid from "../components/ui/MasonryGrid/MasonryGrid";
+import DoubleArrowDown from "../icons/double-arrow-down.svg";
 
-const title = "My Astro Blog";
-const description = "The perfect starter for your perfect blog.";
+const title = "Dev Neill";
+const description = "Devon Neill's digital home.";
 const permalink = Astro.site?.href ?? "";
 ---
 
 <BaseLayout title={title} description={description} permalink={permalink}>
-  <div class="home-container">
-    <div class="home-copy">
-      <h1>Hey 👋🏼 It's Devon</h1>
-      <p>
-        I write about frontend development and how to make the web a beautiful place. <a
-          href="https://www.github.com/Charca/astro-blog-template"
-          target="_blank"
-          rel="noopener">Visit my digital garden</a
-        >.
-      </p>
-      <p>
-        I build web applications too. <a
-          href="https://www.github.com/Charca/astro-blog-template"
-          target="_blank"
-          rel="noopener">Build something with me</a
-        >.
-      </p>
-    </div>
+    <div class="flex gap-12 flex-col items-center justify-between pb-12">
+        <div
+            class="flex gap-12 flex-col min-h-[calc(100vh-3rem)] sm:min-h-[calc(100vh-5rem)] py-12 sm:py-12 items-center justify-between"
+        >
+            <div class="flex flex-col gap-12">
+                <div
+                    class="text-lg lg:text-3xl leading-relaxed gap-4 flex flex-col"
+                >
+                    <h1 class="font-black mb-4">I'm Dev.</h1>
+                    <p>
+                        I'm building a software business and writing about my
+                        learnings as I go.
+                    </p>
+                    <p>
+                        I also like to run in the mountains, surf in the ocean
+                        and spend time away from the world.
+                    </p>
+                </div>
+            </div>
+            <MasonryGrid className="my-auto" client:load />
 
-    <div class="hero-image-container">
-      <picture>
-        <source srcset="/assets/home-illustration.webp" media="(min-width: 600px)" />
-        <img
-          class="hero-image"
-          alt="Illustration of person reading a book"
-          src="/assets/home-illustration-small.webp"
-          width="550"
-          height="466"
-        />
-      </picture>
-      <p class="caption">
-        Illustration by
-        <a
-          href="https://icons8.com/illustrations/author/5c07e68d82bcbc0092519bb6"
-          target="_blank"
-          rel="noopener">Icons 8</a
-        >
-        from
-        <a href="https://icons8.com/illustrations" target="_blank" rel="noopener">Ouch!</a
-        >
-      </p>
+            <div class="w-full mt-auto text-center">
+                <img
+                    class="size-6 animate-pulse mx-auto"
+                    src={DoubleArrowDown.src}
+                />
+            </div>
+        </div>
+        <div class="w-full text-center">
+            <h2>The Epic Stack</h2>
+            <p>
+                I focus my open source energy on contributing to Kent C. Dodd's
+                Epic Stack. His stack is an awesome starting point for building
+                modern web applications and it's what I use when starting
+                something new. <a
+                    href="https://www.github.com/epicweb/epic-stack"
+                    target="_blank"
+                    rel="noopener">Check it out</a
+                >.
+            </p>
+            <h2>GetFranki</h2>
+            <p>
+                Chef Ollie is an energetic, charismatic food lover from Cape
+                Town. From his work as a major catering provider, he realised
+                there is a need for stream-lining how event organisers plan and
+                execute their events. Together, we are building a solution to
+                this. It's called GetFranki. <a
+                    href="https://www.github.com/Charca/astro-blog-template"
+                    target="_blank"
+                    rel="noopener">Check it out</a
+                >.
+            </p>
+            <h2>Dreams web app</h2>
+            <p>
+                Dreams is a savings app that empowers users to save for their
+                future, in fun and engaging way. I've been working with the team
+                building out new features since 2020. <a
+                    href="https://www.github.com/Charca/astro-blog-template"
+                    target="_blank"
+                    rel="noopener">Check it out</a
+                >.
+            </p>
+            <h2>Dreams design system</h2>
+            <p>
+                During my work at Dreams, I realised there was a need to improve
+                our frontend processes. Along with the design team, I built out
+                their design system. It brought the design and development teams
+                closer together and enabled a more consistent user interface
+                across our app. <a
+                    href="https://www.github.com/Charca/astro-blog-template"
+                    target="_blank"
+                    rel="noopener">Check it out</a
+                >.
+            </p>
+        </div>
     </div>
-  </div>
 </BaseLayout>
-
-<style>
-  .home-container {
-    align-items: center;
-    display: flex;
-    flex: 1;
-    justify-content: center;
-    margin: 2em 0;
-    min-height: 400px;
-  }
-
-  .home-copy {
-    flex: 1;
-    padding: 0 1em;
-  }
-
-  .home-copy h1 {
-    font-weight: 700;
-    margin-bottom: 0.5em;
-    line-height: 1.3;
-  }
-
-  .home-copy p {
-    font-size: 1.4em;
-  }
-
-  .hero-image-container {
-    margin: 0 1em;
-    text-align: center;
-  }
-
-  .hero-image-container picture {
-    display: block;
-    min-height: 250px;
-  }
-
-  .caption {
-    font-size: 0.8em;
-    font-style: italic;
-    text-align: left;
-  }
-
-  .hero-image {
-    width: 100%;
-    max-width: 550px;
-    margin-bottom: 1em;
-  }
-
-  @media (max-width: 1200px) {
-    p {
-      font-size: 1.2em;
-    }
-
-    .hero-image {
-      max-width: 400px;
-    }
-  }
-
-  @media (max-width: 800px) {
-    .home-container {
-      flex-direction: column;
-    }
-
-    .home-copy {
-      flex: 0;
-      padding-bottom: 2em;
-      text-align: center;
-    }
-  }
-</style>

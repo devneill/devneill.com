@@ -41,7 +41,9 @@ The big day arrived—the Epic Web Conference 2024. Things kicked off with an ea
 
 On the way, I bumped into [Sandrina](https://twitter.com/a_sandrina_p) - a strong and wise personality. I knew she was giving a talk about accessibility - a weak point of mine. It was nice to get to know her ahead of [her talk](https://www.youtube.com/live/Q0fwzlwTLWk?si=x8kW0d2nuONhSr0C&t=10123), which was eye-opening. After chatting with Sandrina and bumping into Barry, we arrived at the venue and were welcomed with delicious breakfast and good morning chats in the hallway. Anticipation was in the air, and the social nerves were getting shaken out as everyone slowly started getting to know each other. It was time for the first talk.
 
-> “It’s our duty as web creators to make an accessible, epic web” - Sandrina during her talk 🔎️
+> It’s our duty as web creators to make an accessible, epic web
+
+_Sandrina during her talk 🔎️_
 
 # The talks
 
