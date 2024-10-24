@@ -16,5 +16,9 @@ pnpm-debug.log*
 .env
 .env.production
 
+# Easy way to create temporary files/folders that won't accidentally be added to git
+*.local.*
+
+
 # macOS-specific files
 .DS_Store
