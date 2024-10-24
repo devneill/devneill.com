@@ -7,24 +7,6 @@
     }
 }
 
-.wrapper {
-    width: 200px;
-    padding: 16px;
-    background: hsl(210deg 15% 6%);
-    color: white;
-}
-.wrapper h2 {
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    text-align: center;
-    border-bottom: 4px dotted hsl(0deg 0% 30%);
-    animation: fadeIn 500ms both;
-    animation-delay: 200ms;
-}
-.books li {
-    position: relative;
-    height: 50px;
-}
 .bookCover {
     display: block;
     aspect-ratio: 7.25 / 11;

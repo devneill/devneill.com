@@ -16,7 +16,7 @@ function ImageGrid({
 }: ImageGridProps) {
   return (
     <section {...delegated}>
-      <ul className={styles.wrapper}>
+      <ul className={`grid py-4 rounded-lg ${styles.wrapper}`}>
         {images.map((image) => (
           <li key={image.id}>
             <button
@@ -27,7 +27,7 @@ function ImageGrid({
                 layoutId={`image-${image.id}`}
                 alt={image.alt}
                 src={image.src}
-                className={styles.bookCover}
+                className="object-cover rounded-lg will-change-transform size-full"
                 draggable={false}
               />
             </button>

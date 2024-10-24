@@ -4,7 +4,6 @@ import DATA from "./data";
 
 import ImageGrid from "./ImageGrid";
 import ImageFeature from "./ImageFeature";
-import styles from "./ImageGallery.module.css";
 
 export interface Image {
   id: string;
@@ -32,12 +31,8 @@ function ImageGallery() {
   const unselectedImages = images.filter((image) => !image.selected);
 
   return (
-    <div className={styles.wrapper}>
-      <ImageGrid
-        className={styles.grid}
-        images={unselectedImages}
-        handleSelectImage={toggleImage}
-      />
+    <div className="flex flex-col">
+      <ImageGrid images={unselectedImages} handleSelectImage={toggleImage} />
       {selectedImages.length > 0 && (
         <ImageFeature images={selectedImages} handleRemoveImage={toggleImage} />
       )}

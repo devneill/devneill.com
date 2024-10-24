@@ -4,16 +4,16 @@ import Bio from "../../components/Bio.astro";
 import getPostData from "../../utils/getPostData";
 
 type StaticPath = {
-  params: { slug: string | undefined };
-  props: { post: any };
+    params: { slug: string | undefined };
+    props: { post: any };
 };
 
 export async function getStaticPaths(): Promise<StaticPath[]> {
-  const posts = await Astro.glob("../../data/blog-posts/*.md");
-  return posts.map((p) => ({
-    params: { slug: p.file.split("/").pop()?.split(".").shift() },
-    props: { post: p },
-  }));
+    const posts = await Astro.glob("../../data/blog-posts/*.md");
+    return posts.map((p) => ({
+        params: { slug: p.file.split("/").pop()?.split(".").shift() },
+        props: { post: p },
+    }));
 }
 
 const { Content, frontmatter } = Astro.props.post;
@@ -22,39 +22,32 @@ const { slug, readingTime } = getPostData(Astro.props.post);
 const permalink = `${Astro.site?.href}blog/${slug}`;
 ---
 
-<BaseLayout title={title} description={description} permalink={permalink} current="blog">
-  <header>
-    <p>{publishDate} ~ {readingTime}</p>
-    <h1>{title}</h1>
-    <hr />
-  </header>
-  <div class="container">
-    <article class="content">
-      <Content />
-    </article>
-    <hr />
-    <Bio />
-  </div>
+<BaseLayout
+    title={title}
+    description={description}
+    permalink={permalink}
+    current="blog"
+>
+    <div class="flex gap-12 flex-col items-center justify-between pb-12">
+        <div class="flex gap-12 flex-col py-12 sm:py-12 justify-between">
+            <div class="flex flex-col gap-8">
+                <header
+                    class="text-lg lg:text-3xl leading-relaxed gap-2 flex flex-col"
+                >
+                    <h1 class="font-black mb-4">{title}</h1>
+                    <p class="text-sm text-stone-600 dark:text-stone400">
+                        {publishDate} ~ {readingTime}
+                    </p>
+                </header>
+                <div>
+                    <hr />
+                    <article
+                        class="prose prose-stone dark:prose-invert prose-img:rounded-lg"
+                    >
+                        <Content />
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
 </BaseLayout>
-
-<style>
-  header {
-    text-align: center;
-  }
-
-  header h1 {
-    margin-bottom: 0.7em;
-  }
-
-  header p {
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    font-family: var(--font-family-sans);
-    font-weight: 600;
-  }
-
-  header hr {
-    min-width: 100px;
-    width: 30%;
-  }
-</style>
